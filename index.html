@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Statutory Deductions Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>🇰🇪 Kenya Statutory Deductions Calculator</h1>
+        <p>Calculate PAYE, SHIF, NSSF, and Housing Levy using the latest rates.</p>
+
+        <div class="input-section">
+            <label for="grossSalary">Monthly Gross Salary (KSh):</label>
+            <input type="number" id="grossSalary" placeholder="e.g., 85000" required>
+            <button onclick="calculate()">Calculate Deductions</button>
+        </div>
+
+        <div id="results" class="results-section" style="display: none;">
+            <h2>Deductions Summary</h2>
+            
+            <div class="statutory-table">
+                <div class="table-row header">
+                    <span>Deduction</span>
+                    <span>Rate / Basis</span>
+                    <span>Amount (KSh)</span>
+                </div>
+                
+                <div class="table-row">
+                    <span>**PAYE (Tax)**</span>
+                    <span id="payeRate"></span>
+                    <span id="payeAmount">0.00</span>
+                </div>
+                
+                <div class="table-row">
+                    <span>SHIF (Health Insurance)</span>
+                    <span>2.75% of Gross</span>
+                    <span id="shifAmount">0.00</span>
+                </div>
+                
+                <div class="table-row">
+                    <span>AHL (Housing Levy)</span>
+                    <span>1.5% of Gross</span>
+                    <span id="ahlAmount">0.00</span>
+                </div>
+                
+                <div class="table-row">
+                    <span>NSSF (Pension)</span>
+                    <span>6.0% (Tiered)</span>
+                    <span id="nssfAmount">0.00</span>
+                </div>
+            </div>
+
+            <div class="summary-box total-deductions">
+                <span>Total Statutory Deductions</span>
+                <span id="totalDeductionsAmount">0.00</span>
+            </div>
+
+            <div class="summary-box net-pay">
+                <span>Net Take Home Pay</span>
+                <span id="netPayAmount">0.00</span>
+            </div>
+        </div>
+        
+        <div id="error-message" class="error-message"></div>
+    </div>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>

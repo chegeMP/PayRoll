@@ -1,0 +1,176 @@
+/* --- Global Styles: Light, Clean Background --- */
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f7f9fc; /* Very light, soft blue-gray background */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 50px 20px;
+    color: #333; /* Standard dark text */
+}
+
+.calculator-container {
+    background: #ffffff;
+    border-radius: 10px;
+    /* Soft, subtle shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+    padding: 35px;
+    width: 100%;
+    max-width: 580px;
+    box-sizing: border-box;
+    border-top: 5px solid #007bff; /* Primary color accent line */
+}
+
+h1 {
+    color: #1c1e21; 
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* --- Input Section --- */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4b4f56;
+}
+
+input[type="number"] {
+    padding: 14px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+button {
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* --- Results Section --- */
+.results-section h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.statutory-table {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    padding: 14px 18px;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row span {
+    font-size: 0.95rem;
+}
+
+.table-row.header {
+    background-color: #f0f3f8; /* Light gray header */
+    font-weight: 700;
+    color: #333;
+}
+
+.summary-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.total-deductions {
+    background-color: #fff3e0; /* Pale Orange/Cream */
+    color: #e65100; /* Dark Orange Text */
+    border: 1px solid #ffcc80;
+}
+
+.net-pay {
+    background-color: #e8f5e9; /* Pale Green */
+    color: #2e7d32; /* Dark Green Text */
+    font-size: 1.6rem;
+    border: 1px solid #a5d6a7;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* --- Media Query for Mobile --- */
+@media (max-width: 600px) {
+    .calculator-container {
+        padding: 20px;
+    }
+    .table-row {
+        grid-template-columns: 1.5fr 1fr 1.5fr;
+        padding: 10px 15px;
+    }
+    .summary-box {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+    .net-pay {
+        font-size: 1.4rem;
+    }
+}
